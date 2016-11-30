@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<project name="build_FlatCoffee" default="build" basedir="./">
+
+
+	<property name="jarName" value="FlatCoffee" />
+    <property name="version" value="0.1"/>
+	
+	
+	<property name="buildLocationFolder" value="../build/" />
+	
+		
+	<target name="clean">
+		<delete> 
+			<fileset dir="${buildLocationFolder}" >
+				<include name="**/*" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="build" depends="clean">
+		<buildnumber file="flatCoffeeBuild.number"/>
+		
+			<jar destfile="${buildLocationFolder}/${jarName}${version}.jar">
+				<fileset dir="../bin">
+					<include name="**/*" />
+				</fileset>
+				<fileset dir="../src">
+					<include name="**/*" />
+				</fileset>
+				<fileset dir=".">
+					<include name="flatCoffeeBuild.number" /> 
+				</fileset>
+			</jar>
+
+		
+		</target>
+	
+</project>
