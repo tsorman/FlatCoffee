@@ -22,6 +22,9 @@ import javax.swing.JButton;
 import org.flatcoffee.ui.valueGauge.FlatCoffeeValueGaugePanel;
 import org.flatcoffee.ui.comboBox.FlatCoffeeComboBox;
 import javax.swing.DefaultComboBoxModel;
+import org.flatcoffee.ui.button.FlatCoffeeHelpButton;
+import java.awt.Dimension;
+import javax.swing.border.LineBorder;
 
 public class FlatCoffeeDemo extends JFrame {
 
@@ -49,7 +52,7 @@ public class FlatCoffeeDemo extends JFrame {
 	 */
 	public FlatCoffeeDemo() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 431);
+		setBounds(100, 100, 676, 533);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -63,9 +66,9 @@ public class FlatCoffeeDemo extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		GridBagLayout gbl_panel = new GridBagLayout();
 		gbl_panel.columnWidths = new int[]{0, 0, 0};
-		gbl_panel.rowHeights = new int[]{0, 78, 0, 0, 0, 0, 0, 0};
+		gbl_panel.rowHeights = new int[]{0, 78, 0, 0, 0, 0, 0, 0, 0};
 		gbl_panel.columnWeights = new double[]{1.0, 0.0, Double.MIN_VALUE};
-		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
 		FlatCoffeeRoundedButton rndbtnRoundedButton = new FlatCoffeeRoundedButton("Rounded Button", FlatCoffeeColors.LIGHT_BLUE_INFO_COLOR );
@@ -145,11 +148,21 @@ public class FlatCoffeeDemo extends JFrame {
 		FlatCoffeeComboBox flatCoffeeComboBox = new FlatCoffeeComboBox();
 		flatCoffeeComboBox.setModel(new DefaultComboBoxModel(new String[] {"1% cholesterol + 0.25% sodium cholate", "2,4-dinitrophenol", "2-nitrofluorene", "3-methylcholanthrene", "acarbose", "acetamide", "acetamidofluorene", "acetaminophen", "acetazolamide", "adapin", "aflatoxin B1", "ajmaline", "allopurinol", "allyl alcohol", "alpidem", "amiodarone", "amitriptyline", "amphotericin B", "aspirin", "azathioprine", "bendazac", "benzbromarone", "benziodarone", "bortezomib", "bromobenzene", "bromoethylamine", "bucetin", "buspirone", "buthionine sulfoximine", "butylated hydroxyanisole", "caffeine", "captopril", "carbamazepine", "carbon tetrachloride", "carboplatin", "cephalothin", "chloramphenicol", "chlormadinone", "chlormezanone", "chlorpheniramine", "chlorpromazine", "chlorpropamide", "cimetidine", "ciprofloxacin", "cisplatin", "clofibrate", "clomipramine", "clozapine", "colchicine", "compound_name", "coumarin", "cycloheximide", "cyclophosphamide", "cyclosporine A", "danazol", "dantrolene", "desmopressin acetate", "dexamethasone", "diazepam", "diclofenac", "diethyl maleate", "diltiazem", "disopyramide", "disulfiram", "doxorubicin", "enalapril", "erythromycin ethylsuccinate", "ethambutol", "ethanol", "ethinylestradiol", "ethionamide", "ethionine", "etoposide", "famotidine", "fenofibrate", "fluoxetine hydrochloride", "fluphenazine", "flutamide", "furosemide", "galactosamine", "gefitinib", "gemfibrozil", "gentamicin", "glibenclamide", "griseofulvin", "haloperidol", "hepatocyte growth factor, human", "hexachlorobenzene", "hydroxyzine", "ibuprofen", "imatinib, methanesulfonate salt", "imipramine", "indomethacin", "interferon alpha, human", "interleukin 1 beta, human", "interleukin 6, human", "iproniazid", "isoniazid", "ketoconazole", "labetalol", "lomustine", "lornoxicam", "LPS", "mefenamic acid", "meloxicam", "metformin", "methapyrilene", "methimazole", "methyldopa", "methylene dianiline", "methyltestosterone", "mexiletine", "monocrotaline", "moxisylyte", "naphthyl isothiocyanate", "naproxen", "nefazodone", "nicotinic acid", "nifedipine", "nimesulide", "nitrofurantoin", "nitrofurazone", "nitrosodiethylamine", "N-methyl-N-nitrosourea", "N-nitrosomorpholine", "omeprazole", "papaverine", "pemoline", "penicillamine", "perhexiline", "phalloidin", "phenacetin", "phenobarbital", "phenylanthranilic acid", "phenylbutazone", "phenytoin", "phorone", "promethazine", "propranolol", "propylthiouracil", "puromycin aminonucleoside", "quinidine", "ranitidine", "rifampicin", "rosiglitazone maleate", "rotenone", "simvastatin", "sulfasalazine", "sulindac", "sulpiride", "tacrine", "tamoxifen", "tannic acid", "terbinafine", "tetracycline", "theophylline", "thioacetamide", "thioridazine", "ticlopidine", "tiopronin", "TNFalpha", "tolbutamide", "transforming growth factor beta 1", "triamterene", "triazolam", "trimethadione", "tunicamycin", "valproic acid", "venlafaxine", "vitamin A", "WY-14643"}));
 		GridBagConstraints gbc_flatCoffeeComboBox = new GridBagConstraints();
-		gbc_flatCoffeeComboBox.insets = new Insets(0, 0, 0, 5);
+		gbc_flatCoffeeComboBox.insets = new Insets(0, 0, 5, 5);
 		gbc_flatCoffeeComboBox.fill = GridBagConstraints.HORIZONTAL;
 		gbc_flatCoffeeComboBox.gridx = 0;
 		gbc_flatCoffeeComboBox.gridy = 6;
 		panel.add(flatCoffeeComboBox, gbc_flatCoffeeComboBox);
+		
+		FlatCoffeeHelpButton flatCoffeeHelpButton = new FlatCoffeeHelpButton(Color.black , Color.WHITE);
+		flatCoffeeHelpButton.setBorder(new LineBorder(new Color(0, 0, 0)));
+		flatCoffeeHelpButton.setPreferredSize(new Dimension(50, 50));
+		GridBagConstraints gbc_flatCoffeeHelpButton = new GridBagConstraints();
+		gbc_flatCoffeeHelpButton.fill = GridBagConstraints.BOTH;
+		gbc_flatCoffeeHelpButton.insets = new Insets(0, 0, 0, 5);
+		gbc_flatCoffeeHelpButton.gridx = 0;
+		gbc_flatCoffeeHelpButton.gridy = 7;
+		panel.add(flatCoffeeHelpButton, gbc_flatCoffeeHelpButton);
 	}
 
 }
