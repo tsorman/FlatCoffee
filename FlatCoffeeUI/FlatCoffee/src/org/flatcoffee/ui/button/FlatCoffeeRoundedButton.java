@@ -18,7 +18,7 @@ public class FlatCoffeeRoundedButton extends JButton{
         setFont(new Font("Arial", Font.PLAIN, 14));
         setBackground(backGroundColor);
         setForeground(foreGroundColor);
-        setUI(new FlatCoffeeRoundedButtonUI(FlatCoffeeRoundedButtonUI.ROUND_ARC));
+        setUI(new FlatCoffeeButtonUI(FlatCoffeeButtonUI.ROUND_ARC));
 	}
 
 }

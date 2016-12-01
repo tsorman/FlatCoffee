@@ -14,14 +14,14 @@ import javax.swing.JComponent;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicButtonUI;
 
-class FlatCoffeeRoundedButtonUI extends BasicButtonUI {
+class FlatCoffeeButtonUI extends BasicButtonUI {
 	
 	protected static int ROUND_ARC = 13 ;
 	protected static int SQUARE_ARC = 0 ;
 
 	private static int ARC ;
 
-	public  FlatCoffeeRoundedButtonUI( int arc) {
+	public  FlatCoffeeButtonUI( int arc) {
 		
 		if ( arc == SQUARE_ARC )
 			ARC = SQUARE_ARC ;
